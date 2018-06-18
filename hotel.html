@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронювання</title>
+    <style>
+        body {
+            background-color: #777777;
+            font-size: large;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        fieldset {
+            background-color: moccasin;
+            width: 50%;
+            display: inline-block;
+            text-align: center;
+        }
+
+        legend {
+            font-size: x-large;
+        }
+
+        input {
+
+        }
+    </style>
+</head>
+<body>
+<form action="file.php" method="post" enctype="multipart/form-data" autocomplete="on">
+    <fieldset>
+        <legend>Дата бронювання</legend>
+        <p><label>Дата заїзду
+            <input type="date"></label></p>
+
+        <p><label>Дата виїзду:
+            <input type="date"></label></p>
+
+        <p><label>Кількість дорослих:
+            <input type="number" min="1" max="14"></label></p>
+        <p><label>Кількість дітей:
+            <input type="number" min="1" max="14"></label></p>
+
+    </fieldset>
+    <fieldset>
+        <legend>Введіть ваші дані</legend>
+        <p><label>Ім'я:
+            <input type="text" placeholder="Ваше імя:" required></label></p>
+        <p><label>Прізвище:
+            <input type="text" placeholder="Ваше прізвище:" required></label></p>
+        <p><label>E-mail:
+            <input type="email" placeholder="Ваш e-mail:"></label></p>
+    </fieldset>
+
+    <fieldset>
+        <p><label>Спосіб оплати:
+            <input type="radio"> Банківською карткою<br>
+            <input type="radio"> Готівкою
+        </label></p>
+        <p><label>Харчування:
+            <select>
+                <option disabled selected>Виберіть харчування</option>
+                <option value="NO">Без харчування</option>
+                <option value="BB">Bed & Breakfast</option>
+                <option value="FB">Full Board</option>
+                <option value="AI ">All Inclusive</option>
+            </select></label></p>
+        <p><label>Ваші особливі побажання: <br>
+            <textarea cols="30" rows="10"></textarea></label></p>
+
+    </fieldset>
+    <p><input type="submit" value="Бронювати"></p>
+</form>
+
+</body>
+</html>
